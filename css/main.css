@@ -30,8 +30,8 @@ header .header_bottom {
     width: 100%;
     height: calc(28px * 28);
 }
-.collection {
-    background-color: skyblue;
+.collect {
+    /* background-color: skyblue; */
     width: 100%;
     height: calc(28px * 30);
 }
@@ -60,6 +60,7 @@ footer .footer_bottom {
     width: 100%;
     height: calc(28px * 5);
 }
+
 
 /* ====================================
     ======= 팝업창 ======    
@@ -194,9 +195,13 @@ section {
     margin-top: calc(var(--row) * 1);
     border-radius: 2rem;
 }
+.main_banner h2 {
+    line-height: calc(var(--row) * 3);
+}
 .main_banner p {
     margin-left: 1rem;
     margin-top: 3rem;
+    line-height: calc(var(--row) * 2);
 }
 .main_banner .btn {
     position: absolute;
@@ -226,7 +231,7 @@ section {
     line-height: calc(var(--row) * 4);
 }
 .museum > div {
-    width: calc(var(--unit3) * 3 - var(--gu));
+    width: calc(var(--unit) * 3 - var(--gu));
     height: calc(var(--row) * 18);
 }
 .museum>div:not(:nth-last-child(1)) {
@@ -258,6 +263,7 @@ section {
     height: calc(var(--row) * 2);
     line-height: calc(var(--row) * 2);
     font-size: 3rem;
+    font-weight: 500;
 }
 .art_museum div {
     line-height: var(--row);
@@ -395,5 +401,33 @@ section {
 }
 
 /* ====================================
-    ======= comment ======    
+    ======= .collection ======    
 ==================================== */
+
+.collect h3 {
+    line-height: calc(var(--row) * 4);
+}
+.collection .box {
+    width: calc(var(--unit) * 3 - var(--gu));
+    background-color: gray;
+    margin-right: 2.4rem;
+    border-radius: 2rem;
+}
+.collection h5 {
+    margin-top: var(--row);
+    font-weight: 500;
+}
+.collection > div > p {
+    margin-top: 1.2rem;
+}
+
+.collection > div:first-child .box {
+    background-image: url(../source/origin/collection1.PNG);
+    background-size: cover;
+    height: calc(var(--row) * 21);
+}
+.collection > div:last-child .box {
+    background-image: url(../source/origin/collection2.PNG);
+    background-size: cover;
+    height: calc(var(--row) * 11);
+}
