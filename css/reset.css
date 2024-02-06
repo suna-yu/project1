@@ -1,0 +1,164 @@
+@charset "utf-8";
+@import url(./fonts.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css);
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* custom */
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	line-height: 1.75;
+	font-family: 'NanumBarunGothic', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ====================================
+    ======= 전역변수 ======
+==================================== */
+
+:root {
+	--primary1: #f9f9f9;
+	--primary2: #a7a9ac;
+	--secondary1: #2a2b30;
+	--secondary2: #464646;
+	--accent1: #cc7e27;
+	--accent2: #cda348;
+	/* --text1: #333;
+	--text2: #555;
+	--text3: #888;
+	--white: #fff;*/
+	--link: #cc7e27; 
+	--col: 10.8rem;
+	--gu: 2.4rem;
+	--unit: calc(var(--col) + var(--gu));
+	--row: 2.8rem;
+	--n10: 12;
+	--n10: 11;
+	--n10: 10;
+	--n9: 9;
+	--n8: 8;
+	--n7: 7;
+	--n6: 6;
+	--n5: 5;
+	--n4: 4;
+	--n3: 3;
+	--n2: 2;
+	--n1: 1;
+	--unit12: calc(var(--unit) * var(--n12));
+	--unit11: calc(var(--unit) * var(--n11));
+	--unit10: calc(var(--unit) * var(--n10));
+	--unit9: calc(var(--unit) * var(--n9));
+	--unit8: calc(var(--unit) * var(--n8));
+	--unit7: calc(var(--unit) * var(--n7));
+	--unit6: calc(var(--unit) * var(--n6));
+	--unit5: calc(var(--unit) * var(--n5));
+	--unit4: calc(var(--unit) * var(--n4));
+	--unit3: calc(var(--unit) * var(--n3));
+	--unit2: calc(var(--unit) * var(--n2));
+	--unit1: calc(var(--unit) * var(--n1));
+}
+a {
+	text-decoration: none;
+	font-family: 'NanumBarunGothic', sans-serif;
+	color: var(--link);
+	font-size: 1.6rem;
+}
+body {
+	font-family: 'NanumBarunGothic', sans-serif;
+	font-size: 1.6rem;
+}
+
+/* ====================================
+    ======= global classes ======
+==================================== */
+
+.h1,
+h1 {
+	font-size: 6.2rem;
+	font-weight: 700;
+}
+.h2,
+h2 {
+	font-size: 5rem;
+	font-weight: 700;
+}
+.h3,
+h3 {
+	font-size: 4rem;
+	font-weight: 400;
+}
+
+.h4,
+h4 {
+	font-size: 3.2rem;
+	font-weight: 400;
+}
+.h5,
+h5 {
+	font-size: 2.4rem;
+	font-weight: 300;
+}
+.h6,
+h6 {
+	font-size: 1.6rem;
+	font-weight: 300;
+}
+.text {
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.75;
+}
+.link {
+	font-size: 1.6rem;
+	font-size: 400;
+	text-decoration: underline;
+	color: var(--link);
+}
+.df {
+	display: flex;
+}
+.pr {
+	position: relative;
+}
+.pa {
+	position: absolute;
+}
+
+.inner {
+	width: 100%;
+    max-width: 1560px;
+	margin: auto;
+}
