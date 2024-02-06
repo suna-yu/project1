@@ -329,10 +329,6 @@ section {
     height: calc(var(--row) * 21);
     object-fit: cover;
 }
-/* .exh_sc:hover {
-    transform: scale(1.1);
-    filter: brightness(80%);
-} */
 
 .exh .exh_sc:before {
     content: '';
