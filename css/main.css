@@ -1,32 +1,32 @@
 @charset "utf-8";
 
 header .header_top {
-    background-color: crimson;
+    /* background-color: crimson; */
     width: 100%;
     height: calc(28px * 6);
 }
 header .header_bottom {
-    background-color: orangered;
+    /* background-color: orangered; */
     width: 100%;
     height: calc(28px * 3);
 }
 .main_banner {
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
     width: 100%;
     height: calc(28px * 33);
 }
 .art_museum {
-    background-color: gold;
+    /* background-color: gold; */
     width: 100%;
     height: calc(28px * 23);
 }
 .banner {
-    background-color: limegreen;
+    /* background-color: limegreen; */
     width: 100%;
     height: calc(28px * 7);
 }
 .exhibit {
-    background-color: green;
+    /* background-color: green; */
     width: 100%;
     height: calc(28px * 28);
 }
@@ -62,7 +62,7 @@ footer .footer_bottom {
 }
 
 /* ====================================
-    ======= header ======    
+    ======= header ======
 ==================================== */
 .header_top .inner {
     background-color: white;
@@ -94,7 +94,7 @@ footer .footer_bottom {
 .header_top .text>div {padding: 5px;}
 
 /* ====================================
-    ======= nav ======    
+    ======= .header_bottom = nav ======
 ==================================== */
 
 nav {
@@ -111,8 +111,15 @@ nav .sch img {
     scale: 1.5;
 }
 
+nav li a {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: black;
+}
+
 /* ====================================
-    ======= 사이드바 ======    
+    ======= 사이드바 ======
 ==================================== */
 
 body {
@@ -134,7 +141,7 @@ section {
     top: calc(var(--row) * 12);
     bottom: 0;
     right: 0;
-    left: 100%; 
+    left: 100%;
     transform: translateX(-20%);
 }
 
@@ -149,7 +156,7 @@ section {
 }
 
 /* ====================================
-    ======= main .main_banner ======    
+    ======= main .main_banner ======
 ==================================== */
 .main_banner {background-color: white;}
 .main_banner img {
@@ -184,7 +191,7 @@ section {
 
 
 /* ====================================
-    ======= main .art_museum ======    
+    ======= main .art_museum ======
 ==================================== */
 .art_museum {background-color: white;}
 .art_museum h3 {
@@ -238,7 +245,7 @@ section {
 }
 
 /* ====================================
-    ======= main .banner ======    
+    ======= main .banner ======
 ==================================== */
 .banner img {
     width: 100%;
@@ -256,7 +263,7 @@ section {
 }
 
 /* ====================================
-    ======= main .exhibit ======    
+    ======= main .exhibit ======
 ==================================== */
 .exhibit h3 {
     width: var(--unit2);
@@ -308,34 +315,26 @@ section {
     height: 100%;
     background-color: var(--primary2);
 }
-.exh >div:not(:nth-last-child(1)) {
+.exh > div:not(:nth-last-child(1)) {
     margin-right: var(--gu);
 }
 
-.exh .exh_sc {
-    background-position: center;
-    background-size: cover;
+.exh_sc {
     overflow: hidden;
     transition: all 0.2s;
+    position: relative;
 }
-.exh .exh_sc:nth-child(1) {
-    background-image: url(../source/origin/exh1.jpg);
+.exh_sc img {
+    width: calc(var(--unit3) - var(--row));
+    height: calc(var(--row) * 21);
+    object-fit: cover;
 }
-.exh .exh_sc:nth-child(2) {
-    background-image: url(../source/origin/exh2.png);
-}
-.exh .exh_sc:nth-child(3) {
-    background-image: url(../source/origin/exh3.png);
-}
-.exh .exh_sc:nth-child(4) {
-    background-image: url(../source/origin/exh4.png);
-}
-.exh .exh_sc:hover {
+/* .exh_sc:hover {
     transform: scale(1.1);
     filter: brightness(80%);
-}
+} */
 
-.exh .exh_sc::before {
+.exh .exh_sc:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -358,6 +357,7 @@ section {
     line-height: calc(1.6rem * 1.75);
     opacity: 0;
     transition: all 0.2s;
+    left: 0;
 }
 .exh .exh_sc:hover:after {opacity: 1;}
 .exh .exh_sc:nth-child(1):after {
