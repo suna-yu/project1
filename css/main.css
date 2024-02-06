@@ -73,7 +73,7 @@ footer .footer_bottom {
     background-color: white;
     z-index: 999;
     left: 50%;
-    top: 100px;
+    top: 50px;
     transform: translateX(-50%);
     box-shadow: 0 0 45px rgba(0,0,0,0.4);
     user-select: none;
@@ -307,29 +307,22 @@ section {
     text-align: center;
 }
 
-.exhibit h4::before {
+.title div a {
     position: absolute;
-    content: '';
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid var(--secondary1);
-    display: block;
-    top: calc(var(--row) * 1.6);
-    left: 5rem;
+    top: 43px;
 }
-.exhibit h4::after {
-    position: absolute;
-    content: '';
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid var(--secondary1);
-    display: block;
-    top: calc(var(--row) * 1.6);
-    right: 5rem;
-}
+.title div a:nth-child(1) {left: 50px;}
+.title div a:nth-child(3) {right: 50px;}
 
 .title {
     justify-content: center;
+}
+.title::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    top: 90px;
+    border-bottom: 1px solid;
 }
 
 /* ----- 아래 전시그림 ----- */
@@ -337,6 +330,8 @@ section {
 .exh {
     width: 100%;
     height: calc(var(--row) * 21);
+    overflow: hidden;
+    position: absolute;
     overflow: hidden;
 }
 .exh > div {
@@ -352,6 +347,7 @@ section {
     overflow: hidden;
     transition: all 0.2s;
     position: relative;
+    transition: all 0.2;
 }
 .exh_sc img {
     width: calc(var(--unit3) - var(--row));
@@ -397,3 +393,7 @@ section {
 .exh .exh_sc:nth-child(4):after {
     content: '한국의 기하학적 추상미술';
 }
+
+/* ====================================
+    ======= comment ======    
+==================================== */
