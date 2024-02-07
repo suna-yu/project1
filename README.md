@@ -1,4 +1,5 @@
 # 국립현대미술관 <!-- omit in toc -->
+### [기획서 보기](./source/국립현대미술관-기획서.pdf)
 > 국립현대미술관을 리디자인 후 구현한 프로젝트입니다.
 > 배포화면 보기 [사이트 보기](https://suna-yu.github.io/project1/). <!-- If you have the project hosted somewhere, include the link here. -->
 

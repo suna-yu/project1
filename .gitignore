@@ -2,6 +2,5 @@
 *.psd
 *.ai
 *.fig
-/folder
-/reference
-/structure
+/Structure
+/Reference
