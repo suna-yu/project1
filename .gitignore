@@ -1,3 +1,7 @@
 *.zip
 *.psd
+*.ai
+*.fig
 /folder
+/reference
+/structure
