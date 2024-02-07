@@ -2,5 +2,5 @@
 *.psd
 *.ai
 *.fig
-/Structure
-/Reference
+Structure/
+Reference/
