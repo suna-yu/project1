@@ -2,5 +2,8 @@
 *.psd
 *.ai
 *.fig
+*.pptx
 Structure/
 Reference/
+guide/
+/website

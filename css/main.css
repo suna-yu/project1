@@ -1,47 +1,38 @@
 @charset "utf-8";
 
 header .header_top {
-    /* background-color: crimson; */
     width: 100%;
     height: calc(28px * 6);
 }
 header .header_bottom {
-    /* background-color: orangered; */
     width: 100%;
     height: calc(28px * 3);
 }
 .main_banner {
-    /* background-color: lightsalmon; */
     width: 100%;
     height: calc(28px * 33);
 }
 .art_museum {
-    /* background-color: gold; */
     width: 100%;
     height: calc(28px * 23);
 }
 .banner {
-    /* background-color: limegreen; */
     width: 100%;
     height: calc(28px * 7);
 }
 .exhibit {
-    /* background-color: green; */
     width: 100%;
     height: calc(28px * 28);
 }
 .collect {
-    /* background-color: skyblue; */
     width: 100%;
     height: calc(28px * 30);
 }
 .news {
-    background-color: blue;
     width: 100%;
     height: calc(28px * 8);
 }
 .news_letter {
-    background-color: violet;
     width: 100%;
     height: calc(28px * 26);
 }
@@ -68,7 +59,7 @@ footer .footer_bottom {
 .popup {
     position: fixed;
     width: min(50%, 500px);
-    padding: 5% 2%;
+    padding: 2% 2% 3%;
     font-size: 1.8rem;
     line-height: 1.75;
     background-color: white;
@@ -78,15 +69,17 @@ footer .footer_bottom {
     transform: translateX(-50%);
     box-shadow: 0 0 45px rgba(0,0,0,0.4);
     user-select: none;
+    border-radius: 10px;
 }
 .popup > span {
     position: absolute;
     background-color: gray;
-    padding: 1% 3%;
+    padding: 0.5% 3%;
     right: 10%;
-    bottom: 5%;
+    bottom: 10%;
     color: white;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 
@@ -94,7 +87,6 @@ footer .footer_bottom {
     ======= header ======
 ==================================== */
 .header_top .inner {
-    background-color: white;
     height: 100%;
     position: relative;
 }
@@ -102,43 +94,48 @@ footer .footer_bottom {
     margin-top: calc(var(--row) * 2);
     height: calc(var(--row) * 2.5);
 }
-.header_top .login {
+
+.header_top div.text {
+    width: var(--unit1);
     margin-top: calc(var(--row) * 2);
-    margin-right: calc(var(--row) * 3);
     position: absolute;
-    right: var(--unit1);
+    right: 10px;
+    line-height: calc(var(--row) * 3);
+    justify-content: space-around;
+}
+.header_top .login {
+    position: absolute;
+    right: calc(var(--unit1) + 2rem);
     background-color: var(--primary2);
     width: calc(var(--row) * 3);
     height: calc(var(--row) * 3);
     border-radius: 50%;
     line-height: calc(var(--row) * 3);
     text-align: center;
-    padding-top: 2px;
 }
-.header_top div.text {
-    margin-top: calc(var(--row) * 2);
+.header_top .text > div, ul {padding: 5px;}
+
+.header_top .depth2 {
+    line-height: var(--row);
+    display: none;
     position: absolute;
-    right: 10px;
+    top: 40px;
+    padding: 20px 0;
 }
-.header_top .text>div {padding: 5px;}
+.text ul > li:hover .depth2 {display: block;}
 
 /* ====================================
     ======= .header_bottom = nav ======
 ==================================== */
 
-nav {
-    background-color: white;
-    display: block;
-}
+nav {display: block;}
 nav ul {
     width: 1560px;
     display: inline-block;
     line-height: calc(28px * 3);
     justify-content: space-around;
 }
-nav .sch img {
-    scale: 1.5;
-}
+nav .sch img {scale: 1.5;}
 
 nav li a {
     display: block;
@@ -187,7 +184,6 @@ section {
 /* ====================================
     ======= main .main_banner ======
 ==================================== */
-.main_banner {background-color: white;}
 .main_banner img {
     height: calc(var(--row) * 27);
     width: 100%;
@@ -226,7 +222,6 @@ section {
 /* ====================================
     ======= main .art_museum ======
 ==================================== */
-.art_museum {background-color: white;}
 .art_museum h3 {
     line-height: calc(var(--row) * 4);
 }
@@ -241,7 +236,6 @@ section {
 .museum .box {
     width: 100%;
     height: calc(var(--row) * 9);
-    background-color: var(--secondary2);
     border-radius: 1rem;
 }
 
@@ -271,9 +265,9 @@ section {
 
 .museum .btn {
     background-color: var(--secondary1);
-    padding: 2px 1rem;
+    padding: 3px 1.6rem;
     margin-top: var(--row);
-    margin-right: .5rem;
+    margin-right: 1rem;
     border-radius: 2rem;
     color: white;
 }
@@ -332,7 +326,6 @@ section {
 }
 
 /* ----- 아래 전시그림 ----- */
-.exhibit {background-color: white;}
 .exh {
     width: 100%;
     height: calc(var(--row) * 21);
@@ -341,9 +334,8 @@ section {
     overflow: hidden;
 }
 .exh > div {
-    width: calc(var(--unit3) - var(--row));
+    width: calc(var(--unit3) - var(--gu));
     height: 100%;
-    background-color: var(--primary2);
 }
 .exh > div:not(:nth-last-child(1)) {
     margin-right: var(--gu);
@@ -356,7 +348,7 @@ section {
     transition: all 0.2;
 }
 .exh_sc img {
-    width: calc(var(--unit3) - var(--row));
+    width: calc(var(--unit3) - var(--gu));
     height: calc(var(--row) * 21);
     object-fit: cover;
 }
@@ -404,30 +396,121 @@ section {
     ======= .collection ======    
 ==================================== */
 
-.collect h3 {
-    line-height: calc(var(--row) * 4);
+.collect .inner .collection {
+    width: 100%;
+    max-width: var(--unit7);
+}
+.collect h3 {line-height: calc(var(--row) * 4);}
+
+.collection > .df > div {
+    width: 100%;
+    max-width: calc(var(--unit) * 3 - var(--gu));
 }
 .collection .box {
-    width: calc(var(--unit) * 3 - var(--gu));
     background-color: gray;
     margin-right: 2.4rem;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
 }
 .collection h5 {
     margin-top: var(--row);
     font-weight: 500;
 }
-.collection > div > p {
+.collection p {
     margin-top: 1.2rem;
 }
 
-.collection > div:first-child .box {
+.collection > .df > div:first-child .box {
     background-image: url(../source/origin/collection1.PNG);
     background-size: cover;
     height: calc(var(--row) * 21);
 }
-.collection > div:last-child .box {
+.collection > .df > div:last-child .box {
     background-image: url(../source/origin/collection2.PNG);
     background-size: cover;
     height: calc(var(--row) * 11);
+}
+
+/* --- digital --- */
+
+.digital {
+    margin-left: var(--unit1);
+    width: 100%;
+    max-width: var(--unit5);
+}
+.digital .box {
+    background-image: url(../source/origin/digital.PNG);
+    background-size: cover;
+    height: calc(var(--row) * 10);
+    max-width: calc(var(--unit4) - var(--gu));
+    margin-right: 2.4rem;
+    border-radius: 1.5rem;
+}
+
+.digital h5 {
+    line-height: var(--row);
+    font-weight: 500;
+}
+.digital p {
+    margin-top: var(--row);
+    margin-bottom: 1rem;
+}
+
+/* ====================================
+    ======= news ======    
+==================================== */
+
+.news .inner > h3 {
+    width: 100%;
+    max-width: var(--unit2);
+    line-height: calc(28px * 8);;
+}
+
+.news .text {align-self: center;}
+.news .text ul {
+    list-style: disc;
+    line-height: calc(var(--row) * 2);
+}
+.news .text li a {
+    display: block;
+    font-size: 2.4rem;
+}
+
+/* ====================================
+    ======= news_letter ======    
+==================================== */ 
+
+.letter {
+    width: 100%;
+    max-width: var(--unit9);
+}
+.letter > div .box {
+    width: 100%;
+    height: calc(var(--row) * 14);
+    background-color: gray;
+    border-radius: 1.5rem;
+}
+.letter > div {
+    width: 100%;
+    max-width: calc(var(--unit3) - var(--gu));
+    margin-right: var(--gu);
+}
+.letter > div p:nth-of-type(1) {
+    margin-top: var(--row);
+    line-height: var(--row);
+}
+.letter > div p:nth-of-type(2) {
+    line-height: calc(var(--row) * 1.3);
+}
+
+/* --- 온라인 숍 --- */
+.shop {
+    width: 100%;
+    max-width: calc(var(--unit3) - var(--gu));
+}
+.shop > div .box {
+    width: 100%;
+    max-width: calc(var(--unit3) - var(--gu));
+    height: calc(var(--row) * 14);
+    background-color: gray;
+    border-radius: 1.5rem;
 }
