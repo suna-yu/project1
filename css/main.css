@@ -126,19 +126,52 @@ footer .footer_bottom {
 ==================================== */
 
 nav {display: block;}
-nav ul {
+nav > ul {
     width: 1560px;
-    display: inline-block;
+    display: block;
     line-height: calc(28px * 3);
-    justify-content: space-around;
+    justify-content: space-between;
 }
 nav .sch img {scale: 1.5;}
 
-nav li a {
+nav .title {
     display: block;
     font-size: 2.4rem;
     font-weight: bold;
     color: black;
+}
+
+/* -- depth2 -- */
+
+.header_bottom .title > li {
+    position: relative;
+}
+.w100 {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: white;
+    position: absolute;
+    left: 0;
+	transition: height 0.5s;
+    z-index: 2;
+    margin-top: -2rem;
+}
+
+.header_bottom .depth2 {
+    line-height: var(--row);
+    z-index: 2;
+    max-width: 1560px;
+    margin: auto;
+}
+.header_bottom .depth2 a {
+    display: block;
+    color: black;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.header_bottom li:hover .w100 {
+	height: 350px;
 }
 
 /* ====================================
@@ -169,13 +202,14 @@ section {
 }
 
 #sidebar div {
-    background-color: white;
+    background-color: var(--secondary1);
     width: var(--unit1);
     height: calc(var(--row) * 2);
     margin-bottom: 1rem;
     line-height: calc(var(--row) * 2);
     text-align: center;
     border-radius: 5rem;
+    color: white;
 }
 
 /* ====================================
@@ -213,6 +247,7 @@ section {
     margin-bottom: 1rem;
     display: block;
     margin-left: 1rem;
+    font-size: 2.4rem;
 }
 
 
@@ -304,17 +339,17 @@ section {
     text-align: center;
 }
 
-.title div a {
+.exhibit .title div a {
     position: absolute;
     top: 43px;
 }
-.title div a:nth-child(1) {left: 50px;}
-.title div a:nth-child(3) {right: 50px;}
+.exhibit .title div a:nth-child(1) {left: 50px;}
+.exhibit .title div a:nth-child(3) {right: 50px;}
 
-.title {
+.exhibit .title {
     justify-content: center;
 }
-.title::after {
+.exhibit .title::after {
     content: '';
     position: absolute;
     width: 500px;
@@ -599,6 +634,7 @@ section {
 .footer_top .join {
     width: 100%;
     max-width: var(--unit4);
+    flex: 1;
 }
 .footer_top .join div:nth-of-type(2) {
     margin-top: var(--row);
@@ -619,13 +655,15 @@ section {
     line-height: var(--row);
     width: 100%;
     max-width: var(--unit4);
+    flex: 1;
 }
 
+.footer_top .wrap {flex: 1;}
 .footer_top .media:not(:last-of-type) {
-    width: 100%;
-    max-width: var(--unit1);
+    width: var(--unit1);
 }
 .footer_top .media a {
     display: block;
     margin-bottom: 1.2rem;
 }
+
