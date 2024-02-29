@@ -35,9 +35,9 @@
         <div class="header_bottom">
             <nav class="inner df">
                 <ul class="df">
-                    <li><a href="#" class="title">관람참여</a>
+                    <li><a href="#" class="title">관람·참여</a>
                         <div class="w100">
-                            <ul class="depth2">
+                            <ul class="depth2 df">
                                 <li><a href="#">서울</a></li>
                                 <li><a href="#">과천</a></li>
                                 <li><a href="#">덕수궁</a></li>
@@ -150,7 +150,15 @@
     <main>
         <div class="main_banner">
             <div class="inner pr">
-                <img src="./source/main_banner.jpg" alt="메인배너">
+                <div class="mainBanner_wrap">
+                    <img src="./source/main_banner.jpg" alt="메인배너1">
+                    <img src="./source/1.png" alt="메인배너2">
+                    <img src="./source/2.png" alt="메인배너3">
+                </div>
+                <div class="visual_btn">
+                    <img src="./source/icon/left.png" alt="prev">
+                    <img src="./source/icon/right.png" alt="next">
+                </div>
                 <div class="btn pr df">
                     <div>예매하기</div>
                     <div>상세보기</div>
@@ -159,12 +167,20 @@
                     <h2>[과천] 한국의 기하학적 추상미술</h2>
                     <p>2024.1.13~2024.1.14</p>
                 </div>
+                <ul class="pager">
+                    <li class="on"><a href="#" >메인배너1</a></li>
+                    <li><a href="#">메인배너2</a></li>
+                    <li><a href="#">메인배너3</a></li>
+                </ul>
             </div>
-        </div> <!-- main_banner -->
+        </div> 
+        <!-- main_banner -->
         <div class="art_museum">
             <div class="inner">
                 <hr>
-                <h3>미술관</h3>
+                <div class="title">
+                    <h3>미술관</h3>
+                </div>
                 <div class="museum df">
                     <div>
                         <div class="box"></div>
@@ -216,7 +232,8 @@
                     </div>
                 </div>
             </div>
-        </div> <!-- art_museum -->
+        </div> 
+        <!-- art_museum -->
         <div class="banner">
             <div class="inner">
                 <div class="pr">
@@ -224,8 +241,9 @@
                     <div class="join h5">가입하기</div>
                 </div>
             </div>
-        </div> <!--  -->
-        <div class="exhibit pr">
+        </div> 
+        <!-- banner -->
+        <div class="exhibit">
             <div class="inner">
                 <div class="title df">
                     <h3>오늘의 전시</h3>
@@ -250,13 +268,16 @@
                     </div>
                 </div>
             </div>
-        </div> <!-- banner -->
+        </div> 
+        <!-- exhibit -->
         <div class="collect">
             <div class="inner">
                 <hr class="division">
                 <div class="df">
                     <div class="collection">
-                        <h3>소장품</h3>
+                        <div class="title">
+                            <h3>소장품</h3>
+                        </div>
                         <div class="df">
                             <div>
                                 <div class="box"></div>
@@ -271,14 +292,17 @@
                         </div>
                     </div>
                     <div class="digital">
-                        <h3>디지털 미술관</h3>
+                        <div class="title">
+                            <h3>디지털 미술관</h3>
+                        </div>
                         <div class="box"></div>
                         <p>MMCA TV</p>
                         <h5>MMCA 라이브×장기하</h5>
                     </div>
                 </div>
             </div>
-        </div> <!-- collect / digital -->
+        </div> 
+        <!-- collect / digital -->
         <div class="news">
             <div class="inner">
                 <hr class="division">
@@ -293,19 +317,21 @@
                     </div>
                 </div>
             </div>
-        </div> <!-- news -->
+        </div> 
+        <!-- news -->
         <div class="news_letter">
             <div class="inner">
                 <hr class="division">
                 <div class="df">
                     <div>
-                        <h3>뉴스레터</h3>
+                        <div class="title">
+                            <h3>뉴스레터</h3>
+                        </div>
                         <div class="letter df">
                             <div>
                                 <div class="box"></div>
                                 <p>포커스</p>
-                                <p class="h5">우리 존재의 첫 소리, 이름 <창동레지던시 입주보고서 2023: 나의 이름은>
-                                </p>
+                                <p class="h5">우리 존재의 첫 소리, 이름 "창동레지던시 입주보고서 2023: 나의 이름은"</p>
                             </div>
                             <div>
                                 <div class="box"></div>
@@ -320,18 +346,21 @@
                         </div>
                     </div>
                     <div class="shop">
-                        <h3>온라인 숍</h3>
+                        <div class="title">
+                            <h3>온라인 숍</h3>
+                        </div>
                         <div>
                             <div class="box"></div>
                             <p>백남준 탄생 90주년</p>
                             <p class="h5">
-                                <나의 백남준: 기억, 보존, 확산>
+                                "나의 백남준: 기억, 보존, 확산"
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> <!-- news_letter / shop -->
+        </div> 
+        <!-- news_letter / shop -->
         <div class="facility">
             <div class="inner">
                 <hr class="division">
@@ -366,7 +395,8 @@
                     </div>
                 </div>
             </div>
-        </div> <!-- facility -->
+        </div> 
+        <!-- facility -->
     </main>
     <footer>
         <div class="footer_top">
@@ -401,7 +431,8 @@
                                 <li><a href="#">네이버</a></li>
                                 <li><a href="#">네이버포스트</a></li>
                             </ul>
-                        </div> <!-- 소셜미디어 -->
+                        </div> 
+                        <!-- 소셜미디어 -->
                         <div class="media">
                             <ul>
                                 <li><a href="#">개인정보처리방침</a></li>
@@ -411,7 +442,8 @@
                                 <li><a href="#">정보공개</a></li>
                                 <li><a href="#">클린신고센터</a></li>
                             </ul>
-                        </div> <!-- 이용약관 -->
+                        </div> 
+                        <!-- 이용약관 -->
                         <div class="media">
                             <ul>
                                 <li><a href="#">채용</a></li>
@@ -423,7 +455,8 @@
                                 <li><a href="#">사이트맵</a></li>
                                 <li><a href="#">국립현대미술관 문화재단</a></li>
                             </ul>
-                        </div> <!-- 그밖에 -->
+                        </div> 
+                        <!-- 그밖에 -->
                     </div>
                 </div>
             </div>
@@ -434,7 +467,9 @@
             </div>
         </div>
     </footer>
-    <script src="./css/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
