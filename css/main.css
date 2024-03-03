@@ -53,6 +53,37 @@ footer .footer_bottom {
 /* title 공통
     .inner .title { margin-top: 50px;} */
 
+/* 링크 호버 */
+a:hover {
+	/* color: var(--accent1); */
+    text-decoration: underline;
+}
+
+/* ====================================
+    ======= 스킵메뉴 ======    
+==================================== */
+.skip_menu {
+    left: 0;
+    top: 0;
+    padding: 10px 15px;
+    width: 150px;
+}
+.skip_menu a {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: translateY(-200%);
+    transition: all 0.3s;
+    text-align: center;
+    padding: 1rem;
+}
+.skip_menu a:focus {
+    transform: translateY(0);
+}
 
 /* ====================================
     ======= 팝업창 ======    
@@ -136,7 +167,6 @@ nav > ul {
     width: 1560px;
     display: block;
     line-height: calc(28px * 3);
-    justify-content: space-between;
 }
 nav .sch img {scale: 1.5;}
 
@@ -144,7 +174,13 @@ nav .title {
     display: block;
     font-size: 2.4rem;
     font-weight: bold;
-    color: black;
+    text-align: center;
+}
+nav > ul > li:not(:last-of-type) {
+    flex-grow: 1;
+}
+nav > ul > li:last-of-type {
+    margin-right: 1rem;
 }
 
 /* -- depth2 -- */
@@ -161,7 +197,19 @@ nav .title {
     left: 0;
 	transition: height 0.5s;
     z-index: 2;
-    /* margin-top: -2rem; */
+    margin-top: -1rem;
+}
+.header_bottom li .w100::before {
+    content: '';
+    width: 100%;
+    max-width: 1560px;
+    height: 1px;
+    background-color: black;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .header_bottom .depth2 {
@@ -171,42 +219,63 @@ nav .title {
     margin: auto;
     display: flex;
     gap: 1rem;
+    margin-top: 2rem;
 }
 .header_bottom .depth2 a {
     display: block;
     color: black;
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
     margin-bottom: 0.5rem;
 }
 .header_bottom li:hover .w100 {
-	height: 350px;
+	height: 70px;
+}
+.header_bottom li.down1:hover .w100 {
+	height: 230px;
+}
+.header_bottom li.down2:hover .w100 {
+	height: 200px;
+}
+
+
+/* 추가 */
+.depth2 li a {
+    margin-right: 50px;
+    margin: 0 2rem;
+}
+.depth2 > li > a {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.depth3 li a {
+    display: block;
+    text-indent: 3rem;
+    font-size: 1.8rem;
 }
 
 /* ====================================
     ======= 사이드바 ======
 ==================================== */
 
-body {
-    position: relative;
-    height: 100%;
-}
-
-section {
+.sidebar {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 10;
+    pointer-events: none;
 }
 
 #sidebar {
     position: absolute;
-    top: calc(var(--row) * 12);
-    bottom: 0;
+    bottom: calc(var(--row) * 5);
     right: 0;
     left: 100%;
-    transform: translateX(-20%);
+    transform: translateX(-15%);
+    pointer-events: auto;
 }
 
 #sidebar div {
@@ -284,6 +353,15 @@ section {
 }
 .visual_btn img:first-of-type {left: 5%;}
 .visual_btn img:last-of-type {right: 5%;}
+.visual_btn img:before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+}
 
 /* pager */
 .pager {
@@ -354,7 +432,7 @@ section {
 
 .museum .btn {
     background-color: var(--secondary1);
-    padding: 3px 1.6rem;
+    padding: 3px 2rem;
     margin-top: var(--row);
     margin-right: 1rem;
     border-radius: 2rem;
@@ -389,22 +467,29 @@ section {
     line-height: calc(var(--row) * 4);
     text-align: center;
 }
-.exhibit h4 {
+.exhibit h4 > a {
+    display: block;
     width: var(--unit2);
     height: calc(var(--row) * 4);
     line-height: calc(var(--row) * 4);
     text-align: center;
+    font-size: 3.2rem;
 }
 
-.exhibit .title div a {
+.exhibit .title img {
     position: absolute;
-    top: 43px;
+    margin-top: 40px;
 }
-.exhibit .title div a:nth-child(1) {left: 50px;}
-.exhibit .title div a:nth-child(3) {right: 50px;}
+.exhibit .title div img:first-of-type {
+    left: 50px;
+}
+.exhibit .title div img:last-of-type {
+    right: 50px;
+}
 
 .exhibit .title {
     justify-content: center;
+    position: relative;
 }
 .exhibit .title::after {
     content: '';
@@ -419,17 +504,18 @@ section {
     width: 100%;
     height: calc(var(--row) * 21);
     overflow: hidden;
-    /* 여기에 포지션: 앱솔루트가 가로스크롤 원인이었다...  */
 }
-.exh > div {
-    width: calc(var(--unit3) - var(--gu));
-    height: 100%;
-}
-.exh > div:not(:nth-last-child(1)) {
+.exh div:not(:nth-last-child(1)) {
     margin-right: var(--gu);
 }
+.exh [class*='slide'] {
+    width: 100%;
+    position: absolute;
+}
 
-.exh_sc {
+.exh [class*='slide'] > div {
+    width: calc(var(--unit3) - var(--gu));
+    height: 100%;
     overflow: hidden;
     transition: all 0.2s;
     position: relative;
@@ -467,35 +553,37 @@ section {
     left: 0;
 }
 .exh .exh_sc:hover:after {opacity: 1;}
-.exh .exh_sc:nth-child(1):after {
-    content: '이건희 컬렉션 이건희 컬렉션 이건희 컬렉션 이건희 컬렉션 이건희 컬렉션';
-}
-.exh .exh_sc:nth-child(2):after {
-    content: '미술관을 말할 때 우리가 이야기하는 것들';
-}
-.exh .exh_sc:nth-child(3):after {
-    content: '특별수장고: 국립현대미술관 드로잉소장품';
-}
-.exh .exh_sc:nth-child(4):after {
-    content: '한국의 기하학적 추상미술';
-}
+
+.exh .slide1 .exh_sc:nth-child(1):after {content: '이건희 컬렉션';}
+.exh .slide1 .exh_sc:nth-child(2):after {content: '미술관을 말할 때 우리가 이야기하는 것들';}
+.exh .slide1 .exh_sc:nth-child(3):after {content: '특별수장고: 국립현대미술관 드로잉소장품';}
+.exh .slide1 .exh_sc:nth-child(4):after {content: '한국의 기하학적 추상미술';}
+
+.exh .slide2 .exh_sc:nth-child(1):after {content: '프로젝트 해시태그 2023';}
+.exh .slide2 .exh_sc:nth-child(2):after {content: '올해의 작가상 2023';}
+.exh .slide2 .exh_sc:nth-child(3):after {content: '백 투 더 퓨처: 한국 현대미술의 동시대성 탐험기';}
+.exh .slide2 .exh_sc:nth-child(4):after {content: 'MMCA 과천프로젝트 2023:연결';}
+
+.exh .slide3 .exh_sc:nth-child(1):after {content: '미술관 길목 프로젝트: 정세인';}
+.exh .slide3 .exh_sc:nth-child(2):after {content: 'MMCA 청주프로젝트: 2023 "안성석: 모두의 안녕을 위해"';}
+.exh .slide3 .exh_sc:nth-child(3):after {content: '디지털스토리: 이야기가 필요하다';}
+.exh .slide3 .exh_sc:nth-child(4):after {content: '개방 수장고 개편';}
 
 /* ====================================
     ======= .collection ======    
 ==================================== */
 
-.collect .inner .collection {
+.collection {
     width: 100%;
     max-width: var(--unit7);
 }
 .collect h3 {line-height: calc(var(--row) * 4);}
 
-.collection > .df > div {
+.collection .show > div {
     width: 100%;
     max-width: calc(var(--unit) * 3 - var(--gu));
 }
 .collection .box {
-    background-color: gray;
     margin-right: 2.4rem;
     border-radius: 1.5rem;
 }
@@ -518,10 +606,22 @@ section {
     height: calc(var(--row) * 11);
 }
 
+.collect .btn {
+    text-align: center;
+    width: 80px;
+    height: 3rem;
+    padding: 8px 1.6rem;
+    border-radius: 2rem;
+    color: white;
+    background-color: var(--secondary1);
+    margin-left: var(--gu);
+    margin-top: calc(var(--row) * 1.4);
+}
+
 /* --- digital --- */
 
 .digital {
-    margin-left: var(--unit1);
+    margin-left: clamp(var(--gu), var(--unit1));
     width: 100%;
     max-width: var(--unit5);
 }
@@ -529,6 +629,7 @@ section {
     background-image: url(../source/origin/digital.PNG);
     background-size: cover;
     height: calc(var(--row) * 10);
+    width: 100%;
     max-width: calc(var(--unit4) - var(--gu));
     margin-right: 2.4rem;
     border-radius: 1.5rem;
@@ -583,7 +684,19 @@ section {
     margin-right: var(--gu);
 }
 .news_letter h3 {
-    line-height: calc(var(--row) * 3);
+    line-height: calc(var(--row) * 4);
+}
+
+.news_letter .btn {
+    text-align: center;
+    width: 80px;
+    height: 3rem;
+    padding: 8px 1.6rem;
+    border-radius: 2rem;
+    color: white;
+    background-color: var(--secondary1);
+    margin-left: var(--gu);
+    margin-top: calc(var(--row) * 1.4);
 }
 
 .letter > div .box {
@@ -730,4 +843,5 @@ section {
     display: block;
     margin-bottom: 1.2rem;
 }
+
 

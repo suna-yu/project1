@@ -12,40 +12,54 @@
 </head>
 
 <body>
+    <div class="skip_menu">
+        <a href="#login">로그인 바로가기</a>
+        <a href="#menu">메뉴 바로가기</a>
+        <a href="#exhibit">오늘의 전시 바로가기</a>
+        <a href="#news">새소식 바로가기</a>
+    </div>
     <div class="popup">해당 사이트는 학습용으로 제작되었으며 국립현대미술관과 무관합니다. 구직용 포트폴리오로 상업적 목적이 없음을 알립니다. <span>닫기</span></div>
     <header>
         <div class="header_top">
             <div class="inner df">
                 <img src="./source/logo_ver2_text.png" alt="로고">
-                <div class="text df">
-                    <div class="login">회원가입</div>
-                    <div>login</div>
+                <div class="text df" >
+                    <div class="login"><a href="#">회원가입</a></div>
+                    <div><a href="#" id="login">login</a></div>
                     <ul class="pr">
-                        <li>한국어⮟
+                        <li><a href="#">한국어⮟</a>
                             <ul class="depth2">
-                                <li>한국어</li>
-                                <li>Engilsh</li>
-                                <li>日本語</li>
+                                <li><a href="#">한국어</a></li>
+                                <li><a href="#">Engilsh</a></li>
+                                <li><a href="#">日本語</a></li>
                             </ul>
                         </li>
                     </ul>
-                </div>
+                </div>  
             </div>
         </div>
-        <div class="header_bottom">
+        <div class="header_bottom" id="menu">
             <nav class="inner df">
                 <ul class="df">
-                    <li><a href="#" class="title">관람·참여</a>
+                    <li class="down1"><a href="#" class="title">관람·참여</a>
                         <div class="w100">
                             <ul class="depth2 df">
-                                <li><a href="#">서울</a></li>
-                                <li><a href="#">과천</a></li>
-                                <li><a href="#">덕수궁</a></li>
-                                <li><a href="#">청주</a></li>
-                                <li><a href="#">어린이미술관</a></li>
-                                <li><a href="#">이벤트</a></li>
-                                <li><a href="#">통합예약</a></li>
-                                <li><a href="#">전시해설</a></li>
+                                <li><a href="#">관람</a>
+                                    <ul class="depth3">
+                                        <li><a href="#">서울</a></li>
+                                        <li><a href="#">과천</a></li>
+                                        <li><a href="#">덕수궁</a></li>
+                                        <li><a href="#">청주</a></li>
+                                        <li><a href="#">어린이미술관</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">참여</a>
+                                    <ul class="depth3">
+                                        <li><a href="#">이벤트</a></li>
+                                        <li><a href="#">통합예약</a></li>
+                                        <li><a href="#">전시해설</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#">레지던시</a></li>
                                 <li><a href="#">미술은행</a></li>
                             </ul>
@@ -60,14 +74,18 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="#" class="title">교육</a>
+                    <li class="down2"><a href="#" class="title">교육</a>
                         <div class="w100">
                             <ul class="depth2">
                                 <li><a href="#">미술관 교육소개</a></li>
-                                <li><a href="#">어린이</a></li>
-                                <li><a href="#">청소년</a></li>
-                                <li><a href="#">성인</a></li>
-                                <li><a href="#">교사</a></li>
+                                <li><a href="#">교육</a>
+                                    <ul class="depth3">
+                                        <li><a href="#">어린이</a></li>
+                                        <li><a href="#">청소년</a></li>
+                                        <li><a href="#">성인</a></li>
+                                        <li><a href="#">교사</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#">교육자료실</a></li>
                                 <li><a href="#">참여신청</a></li>
                             </ul>
@@ -130,7 +148,7 @@
                                 <li><a href="#">자원봉사</a></li>
                                 <li><a href="#">후원</a></li>
                                 <li><a href="#">시설대관·복제신청</a></li>
-                                <li><a href="#">국립현대미술관<br>문화재단</a></li>
+                                <li><a href="#">국립현대미술관 문화재단</a></li>
                             </ul>
                         </div>
                     </li>
@@ -139,25 +157,25 @@
             </nav>
         </div>
     </header>
-    <!-- <section>
+    <div class="sidebar">
         <div class="inner pr" id="sidebar">
-            <div>사이트맵</div>
-            <div>SNS</div>
-            <div>온라인숍</div>
+            <div><a href="#">사이트맵</a></div>
+            <div><a href="#">SNS</a></div>
+            <div><a href="#">온라인숍</a></div>
         </div> 
-    </section>  -->
+    </div> 
     <!-- //#sidebar -->
     <main>
         <div class="main_banner">
             <div class="inner pr">
                 <div class="mainBanner_wrap">
-                    <img src="./source/main_banner.jpg" alt="메인배너1">
-                    <img src="./source/1.png" alt="메인배너2">
-                    <img src="./source/2.png" alt="메인배너3">
+                    <img src="./source/origin/main_visual.jpg" alt="메인배너1">
+                    <img src="./source/origin/main_visual2.jpg" alt="메인배너2">
+                    <img src="./source/origin/main_visual3.jpg" alt="메인배너3">
                 </div>
                 <div class="visual_btn">
-                    <img src="./source/icon/left.png" alt="prev">
-                    <img src="./source/icon/right.png" alt="next">
+                    <img src="./source/icon/left_big.png" alt="prev">
+                    <img src="./source/icon/right_big.png" alt="next">
                 </div>
                 <div class="btn pr df">
                     <div>예매하기</div>
@@ -246,27 +264,57 @@
         <div class="exhibit">
             <div class="inner">
                 <div class="title df">
-                    <h3>오늘의 전시</h3>
-                    <div class="pr">
-                        <a href="#"><img src="./source/icon/left.png" alt="이전"></a>
-                        <h4>서울</h4>
-                        <a href=""><img src="./source/icon/right.png" alt="이후"></a>
+                    <h3 id="exhibit">오늘의 전시</h3>
+                    <div class="pr df">
+                        <img src="./source/icon/left.png" alt="이전" class="btn">
+                        <h4><a href="#">서울</a></h4>
+                        <img src="./source/icon/right.png" alt="이후" class="btn">
                     </div>
                 </div>
-                <div class="exh df">
-                    <div class="exh_sc pr">
-                        <img src="./source/origin/exh1.jpg" alt="">
-                    </div>
-                    <div class="exh_sc pr">
-                        <img src="./source/origin/exh2.png" alt="">
-                    </div>
-                    <div class="exh_sc pr">
-                        <img src="./source/origin/exh3.png" alt="">
-                    </div>
-                    <div class="exh_sc pr">
-                        <img src="./source/origin/exh4.png" alt="">
-                    </div>
-                </div>
+                <ul class="exh df pr">
+                    <li class="slide1 df">
+                        <div class="exh_sc pr">
+                            <a href="#"><img src="./source/origin/exh1.jpg" alt=""></a>
+                        </div>
+                        <div class="exh_sc pr">
+                            <a href="#"><img src="./source/origin/exh2.png" alt=""></a>
+                        </div>
+                        <div class="exh_sc pr">
+                            <a href="#"><img src="./source/origin/exh3.png" alt=""></a>
+                        </div>
+                        <div class="exh_sc pr">
+                            <a href="#"><img src="./source/origin/exh4.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="slide2 df">
+                        <div class="exh_sc pr">
+                            <a href="#"><img src="./source/origin/exh2-1.png" alt=""></a>
+                        </div>
+                        <div class="exh_sc pr">
+                            <a href="#"><img src="./source/origin/exh2-2.png" alt=""></a>
+                        </div>
+                        <div class="exh_sc pr">
+                            <a href="#"><img src="./source/origin/exh2-3.jpg" alt=""></a>
+                        </div>
+                        <div class="exh_sc pr">
+                            <a href="#"><img src="./source/origin/exh2-4.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="slide3 df">
+                        <div class="exh_sc pr">
+                            <a href="#"><img src="./source/origin/exh3-1.png" alt=""></a>
+                        </div>
+                        <div class="exh_sc pr">
+                            <a href="#"><img src="./source/origin/exh3-2.png" alt=""></a>
+                        </div>
+                        <div class="exh_sc pr">
+                            <a href="#"><img src="./source/origin/exh3-3.png" alt=""></a>
+                        </div>
+                        <div class="exh_sc pr">
+                            <a href="#"><img src="./source/origin/exh3-4.png" alt=""></a>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div> 
         <!-- exhibit -->
@@ -275,10 +323,11 @@
                 <hr class="division">
                 <div class="df">
                     <div class="collection">
-                        <div class="title">
+                        <div class="title df">
                             <h3>소장품</h3>
+                            <div class="btn">더보기</div>
                         </div>
-                        <div class="df">
+                        <div class="df show">
                             <div>
                                 <div class="box"></div>
                                 <h5>국립현대미술관 소장품 300</h5>
@@ -292,8 +341,9 @@
                         </div>
                     </div>
                     <div class="digital">
-                        <div class="title">
+                        <div class="title df">
                             <h3>디지털 미술관</h3>
+                            <div class="btn">더보기</div>
                         </div>
                         <div class="box"></div>
                         <p>MMCA TV</p>
@@ -303,7 +353,7 @@
             </div>
         </div> 
         <!-- collect / digital -->
-        <div class="news">
+        <div class="news" id="news">
             <div class="inner">
                 <hr class="division">
                 <div class="df">
@@ -324,8 +374,9 @@
                 <hr class="division">
                 <div class="df">
                     <div>
-                        <div class="title">
+                        <div class="title df">
                             <h3>뉴스레터</h3>
+                            <div class="btn">더보기</div>
                         </div>
                         <div class="letter df">
                             <div>
@@ -346,8 +397,9 @@
                         </div>
                     </div>
                     <div class="shop">
-                        <div class="title">
+                        <div class="title df">
                             <h3>온라인 숍</h3>
+                            <div class="btn">더보기</div>
                         </div>
                         <div>
                             <div class="box"></div>
@@ -356,6 +408,7 @@
                                 "나의 백남준: 기억, 보존, 확산"
                             </p>
                         </div>
+                        
                     </div>
                 </div>
             </div>
