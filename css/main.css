@@ -228,20 +228,14 @@ nav > ul > li:first-of-type {
 }
 .header_bottom .depth2 a {
     display: block;
-    color: black;
     margin-bottom: 0.5rem;
+    margin-right: 50px;
 }
 .header_bottom li:hover .w100 {
 	height: 70px;
 }
 
-
-/* 추가 */
-.depth2 li a {
-    margin-right: 50px;
-}
 .depth2 > li > a {
-    display: block;
     font-weight: 700;
     font-size: 20px;
 }
@@ -288,8 +282,8 @@ nav > ul > li:first-of-type {
     position: absolute;
     transform: scale(1.5);
     margin-top: 1rem;
-    padding: 0.5rem 0.6rem;
-    left: 1.3rem;
+    padding: 0.85rem 0.95rem;
+    left: 1.05rem;
     background-color: var(--primary1);
     border: 1px solid;
     border-radius: 50%;
@@ -759,6 +753,11 @@ nav > ul > li:first-of-type {
     ======= facility ======    
 ==================================== */
 
+.facility h3 {
+    text-indent: -9999999999px;
+    position: absolute;
+}
+
 .fac > div {
     width: calc(var(--unit) * 3 - var(--gu));
     height: calc(var(--row) * 18);
@@ -853,7 +852,14 @@ nav > ul > li:first-of-type {
 }
 
 /* footer_bottom */
-.footer_bottom a img[alt*= 유효성검사] {
-    transform: scale(0.5);
-    margin-top: -3rem;
+.footer_bottom .inner {
+    justify-content: space-between;
+}
+
+.footer_bottom a img.html {
+    transform: scale(0.35);
+    margin-top: -2.8rem;
+}
+.footer_bottom a img.css {
+    margin-top: 1rem;
 }
