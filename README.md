@@ -20,7 +20,6 @@
 
 ## 프로젝트 제작 동기
 - html5, css3, 바닐라 jvscript를 사용하여 구현한 웹사이트입니다.
-- 반응형 페이지로 구현하였습니다.
 - 디자인부터 코딩까지 100% 혼자 작업한 프로젝트입니다.
 - 디자인은 그리드 시스템을 사용하였습니다. 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
@@ -76,7 +75,6 @@ body
 ### 주요 구현 사항
 - 화면 100%를 채우는 드롭다운 gnb 메뉴
 - 메인 비주얼 슬라이드 직접 구현 (no plugin)
-- 
 
 
 ## Screenshots
