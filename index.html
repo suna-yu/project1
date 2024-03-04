@@ -4,11 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="퍼블리셔 유선아의 첫번째 프로젝트입니다. 국립현대미술관을 리디자인한 개인 포트폴리오 사이트입니다.">
+    <meta name="keyword" content="퍼블리셔, 포트폴리오, 프로젝트, 신입퍼블리셔, 웹디자이너, 관공서 프로젝트, publisher, html5">
+    <meta name="author" content="유선아">
+    <meta property="og:title" content="국립현대미술관"> 
+    <meta property="og:url" content="https://suna-yu.github.io/project1/"> 
+    <meta property="og:type" content="website">  
+    <meta property="og:image" href="./source/sns_img.png"> 
+    <meta property="og:site_name" content="유선아의 프로젝트1"> 
+    <meta property="og:description" content="퍼블리셔 유선아의 첫번째 프로젝트입니다. 국립현대미술관을 리디자인한 개인 포트폴리오 사이트입니다.">
+
     <title>국립현대미술관</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="./source/logo_ver.2.png">
-    <!-- var: "-v" / vcalc: "-cv" / comment: "!c" -->
 </head>
 
 <body>
@@ -19,12 +28,12 @@
         <a href="#news">새소식 바로가기</a>
     </div>
     <div class="popup">해당 사이트는 학습용으로 제작되었으며 국립현대미술관과 무관합니다. 구직용 포트폴리오로 상업적 목적이 없음을 알립니다. <span>닫기</span></div>
-    <header>
-        <div class="header_top">
+    <header id="top">
+        <div class="header_top" >
             <div class="inner df">
-                <img src="./source/logo_ver2_text.png" alt="로고">
+                <h1><a href="#"><img src="./source/logo_ver2_text.png" alt="로고"></a></h1>
                 <div class="text df" >
-                    <div class="login"><a href="#">회원가입</a></div>
+                    <div class="signIn"><a href="#">회원가입</a></div>
                     <div><a href="#" id="login">login</a></div>
                     <ul class="pr">
                         <li><a href="#">한국어⮟</a>
@@ -41,27 +50,19 @@
         <div class="header_bottom" id="menu">
             <nav class="inner df">
                 <ul class="df">
-                    <li class="down1"><a href="#" class="title">관람·참여</a>
+                    <li><a href="#" class="title r">관람·참여</a>
                         <div class="w100">
                             <ul class="depth2 df">
-                                <li><a href="#">관람</a>
-                                    <ul class="depth3">
-                                        <li><a href="#">서울</a></li>
-                                        <li><a href="#">과천</a></li>
-                                        <li><a href="#">덕수궁</a></li>
-                                        <li><a href="#">청주</a></li>
-                                        <li><a href="#">어린이미술관</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">참여</a>
-                                    <ul class="depth3">
-                                        <li><a href="#">이벤트</a></li>
-                                        <li><a href="#">통합예약</a></li>
-                                        <li><a href="#">전시해설</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">레지던시</a></li>
-                                <li><a href="#">미술은행</a></li>
+                                <li><a href="#">서울</a></li>
+                                <li><a href="#">과천</a></li>
+                                <li><a href="#">덕수궁</a></li>
+                                <li><a href="#">청주</a></li>
+                                <li><a href="#">어린이미술관</a></li>    
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">통합예약</a></li>
+                                <li><a href="#" class="sub">전시해설</a></li>
+                                <li><a href="#" class="sub">레지던시</a></li>
+                                <li><a href="#" class="sub">미술은행</a></li>
                             </ul>
                         </div>
                     </li>
@@ -74,18 +75,14 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="down2"><a href="#" class="title">교육</a>
+                    <li><a href="#" class="title">교육</a>
                         <div class="w100">
                             <ul class="depth2">
                                 <li><a href="#">미술관 교육소개</a></li>
-                                <li><a href="#">교육</a>
-                                    <ul class="depth3">
-                                        <li><a href="#">어린이</a></li>
-                                        <li><a href="#">청소년</a></li>
-                                        <li><a href="#">성인</a></li>
-                                        <li><a href="#">교사</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="#">어린이</a></li>
+                                <li><a href="#">청소년</a></li>
+                                <li><a href="#">성인</a></li>
+                                <li><a href="#">교사</a></li>
                                 <li><a href="#">교육자료실</a></li>
                                 <li><a href="#">참여신청</a></li>
                             </ul>
@@ -159,9 +156,10 @@
     </header>
     <div class="sidebar">
         <div class="inner pr" id="sidebar">
-            <div><a href="#">사이트맵</a></div>
+            <div><a href="#">MAP</a></div>
             <div><a href="#">SNS</a></div>
-            <div><a href="#">온라인숍</a></div>
+            <div><a href="#">SHOP</a></div>
+            <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
         </div> 
     </div> 
     <!-- //#sidebar -->
@@ -467,11 +465,11 @@
                         </div>
                     </div>
                     <div class="call">
-                        <p>대표자: 유선아, 구직용 포트폴리오 사이트: 010-1234-5678</p>
-                        <pre>대표자: (서울) 02-1234-5678
-              (과천) 02-1234-5678
-              (덕수궁) 02-1234-5678
-              (청주) 02-1234-5678</pre>
+                        <p>대표자: 홍길동, 사업자등록번호: 347-35-46843</p>
+                        <pre>대표전화: (서울) 02-3547-5868
+              (과천) 02-3546-5678
+              (덕수궁) 02-3439-5678
+              (청주) 02-8763-5678</pre>
                         <p>&#169; 2021 National Museum of Modern and Contemporary Art, Korea</p>
                     </div>
                     <div class="wrap df">
@@ -488,7 +486,7 @@
                         <!-- 소셜미디어 -->
                         <div class="media">
                             <ul>
-                                <li><a href="#">개인정보처리방침</a></li>
+                                <li><a href="#" class="str">개인정보처리방침</a></li>
                                 <li><a href="#">이용약관</a></li>
                                 <li><a href="#">저작권정책</a></li>
                                 <li><a href="#">국민신문고</a></li>

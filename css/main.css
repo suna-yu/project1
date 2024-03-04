@@ -50,12 +50,11 @@ footer .footer_bottom {
     height: calc(28px * 5);
 }
 
-/* title 공통
-    .inner .title { margin-top: 50px;} */
+/* title 공통*/
+    /* .inner .title { margin-top: 50px;}  */
 
 /* 링크 호버 */
 a:hover {
-	/* color: var(--accent1); */
     text-decoration: underline;
 }
 
@@ -135,16 +134,16 @@ a:hover {
     line-height: calc(var(--row) * 3);
     justify-content: space-around;
 }
-.header_top .login {
+.header_top .signIn {
     position: absolute;
     right: calc(var(--unit1) + 2rem);
-    background-color: var(--primary2);
+    background-color: var(--secondary1);
     width: calc(var(--row) * 3);
     height: calc(var(--row) * 3);
     border-radius: 50%;
     line-height: calc(var(--row) * 3);
     text-align: center;
-    color: #dfdfdf
+    color: white
 }
 
 .header_top .depth2 {
@@ -176,11 +175,15 @@ nav .title {
     font-weight: bold;
     text-align: center;
 }
+nav .title.r {
+    text-align: left;
+}
+
 nav > ul > li:not(:last-of-type) {
     flex-grow: 1;
 }
-nav > ul > li:last-of-type {
-    margin-right: 1rem;
+nav > ul > li:first-of-type {
+    flex-grow: 0.5;
 }
 
 /* -- depth2 -- */
@@ -224,35 +227,24 @@ nav > ul > li:last-of-type {
 .header_bottom .depth2 a {
     display: block;
     color: black;
-    /* font-size: 1.8rem; */
     margin-bottom: 0.5rem;
 }
 .header_bottom li:hover .w100 {
 	height: 70px;
-}
-.header_bottom li.down1:hover .w100 {
-	height: 230px;
-}
-.header_bottom li.down2:hover .w100 {
-	height: 200px;
 }
 
 
 /* 추가 */
 .depth2 li a {
     margin-right: 50px;
-    margin: 0 2rem;
 }
 .depth2 > li > a {
     display: block;
     font-weight: 700;
     font-size: 20px;
 }
-
-.depth3 li a {
-    display: block;
-    text-indent: 3rem;
-    font-size: 1.8rem;
+.depth2 > li > a.sub {
+    font-weight: 500;
 }
 
 /* ====================================
@@ -280,13 +272,25 @@ nav > ul > li:last-of-type {
 
 #sidebar div {
     background-color: var(--secondary1);
-    width: var(--unit1);
+    width: calc(var(--row) * 2);
     height: calc(var(--row) * 2);
     margin-bottom: 1rem;
     line-height: calc(var(--row) * 2);
     text-align: center;
     border-radius: 5rem;
     color: white;
+}
+
+#sidebar > a {
+    display: block;
+    scale: 1.5;
+    position: absolute;
+    margin-top: 1rem;
+    padding: 0.5rem 0.6rem;
+    left: 1.35rem;
+    background-color: var(--primary1);
+    border: 1px solid;
+    border-radius: 50%;
 }
 
 /* ====================================
@@ -843,5 +847,6 @@ nav > ul > li:last-of-type {
     display: block;
     margin-bottom: 1.2rem;
 }
-
-
+.footer_top .media .str {
+    font-weight: bold;
+}
