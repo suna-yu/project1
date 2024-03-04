@@ -167,7 +167,9 @@ nav > ul {
     display: block;
     line-height: calc(28px * 3);
 }
-nav .sch img {scale: 1.5;}
+nav .sch img {
+transform: scale(1.5);
+}
 
 nav .title {
     display: block;
@@ -283,11 +285,11 @@ nav > ul > li:first-of-type {
 
 #sidebar > a {
     display: block;
-    scale: 1.5;
     position: absolute;
+    transform: scale(1.5);
     margin-top: 1rem;
     padding: 0.5rem 0.6rem;
-    left: 1.35rem;
+    left: 1.3rem;
     background-color: var(--primary1);
     border: 1px solid;
     border-radius: 50%;
@@ -457,7 +459,7 @@ nav > ul > li:first-of-type {
     top: calc(var(--row) * 2.5);
     right: 0;
     margin-right: var(--row);
-    padding: 2.5rem 4cqi;
+    padding: 2.5rem 4rem;
     border-radius: 5rem;
     color: white;
 }
@@ -523,7 +525,6 @@ nav > ul > li:first-of-type {
     overflow: hidden;
     transition: all 0.2s;
     position: relative;
-    transition: all 0.2;
 }
 .exh_sc img {
     width: calc(var(--unit3) - var(--gu));
@@ -625,7 +626,7 @@ nav > ul > li:first-of-type {
 /* --- digital --- */
 
 .digital {
-    margin-left: clamp(var(--gu), var(--unit1));
+    margin-left: var(--unit1);
     width: 100%;
     max-width: var(--unit5);
 }
@@ -849,4 +850,10 @@ nav > ul > li:first-of-type {
 }
 .footer_top .media .str {
     font-weight: bold;
+}
+
+/* footer_bottom */
+.footer_bottom a img[alt*= 유효성검사] {
+    transform: scale(0.5);
+    margin-top: -3rem;
 }
