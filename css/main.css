@@ -90,7 +90,7 @@ a:hover {
 .popup {
     position: fixed;
     width: min(50%, 500px);
-    padding: 2% 2% 3%;
+    padding: 2% 2% 5%;
     font-size: 1.8rem;
     line-height: 1.75;
     background-color: white;
@@ -102,7 +102,7 @@ a:hover {
     user-select: none;
     border-radius: 10px;
 }
-.popup > span {
+.popup .close {
     position: absolute;
     background-color: var(--secondary1);
     padding: 0.5% 3%;

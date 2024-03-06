@@ -16,8 +16,7 @@
 
     <title>국립현대미술관</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/subpage.css">
-    <!-- <link rel="stylesheet" href="./css/mediaquery.css"> -->
+    <link rel="stylesheet" href="./css/login.css">
     <link rel="shortcut icon" href="./source/logo_ver.2.png">
 </head>
 
@@ -162,22 +161,35 @@
     </div> 
     <!-- //#sidebar -->
     <main>
-        <form action="#" method="post">
-            <div class="input_group">
-                <label>아이디
-                    <input type="text" placeholder="아이디를 입력하세요" id="uid">
-                </label>
-                <span>테스트 아이디 : test</span>
-            </div>
-            <div class="input_group">
-                <label>비밀번호
-                    <input type="text" placeholder="비밀번호를 입력하세요" id="upw">
-                </label>
-                <span>테스트 비밀번호 : 1234</span>
-            </div>
-            <button id="loginBtn"><img src="./source/icon/log-in-outline.svg" alt="">로그인</button>
-        </form>
-        <button id="logoutBtn"><img src="./source/icon/log-in-outline.svg" alt="">로그아웃</button>
+        <div class="login_wrap pr">
+            <h3>로그인</h3>
+            <form action="#" method="post">
+                <div class="input_group">
+                    <label>
+                        <div class="df">
+                            <h5>아이디</h5>
+                            <span>테스트 아이디 : test</span>
+                        </div>
+                        <input type="text" placeholder="아이디를 입력하세요" id="uid">
+                    </label>
+                </div>
+                <div class="input_group">
+                    <label>
+                        <div class="df">
+                            <h5>비밀번호</h5>
+                            <span>테스트 비밀번호 : 1234</span>
+                        </div>
+                        <input type="text" placeholder="비밀번호를 입력하세요" id="upw">
+                    </label>
+                </div>
+                <div class="df">
+                    <input type="checkbox"> 
+                    <div>아이디(이메일) 저장</div>
+                </div>
+                <button id="loginBtn"><i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp;로그인</button>
+            </form>
+            <button id="logoutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;로그아웃</button>
+        </div>
     </main>
     <footer>
         <div class="footer_top">
@@ -254,7 +266,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>
