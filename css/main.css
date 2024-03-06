@@ -104,7 +104,7 @@ a:hover {
 }
 .popup > span {
     position: absolute;
-    background-color: gray;
+    background-color: var(--secondary1);
     padding: 0.5% 3%;
     right: 10%;
     bottom: 10%;
@@ -168,7 +168,8 @@ nav > ul {
     line-height: calc(28px * 3);
 }
 nav .sch img {
-transform: scale(1.5);
+    transform: scale(0.8);
+    margin-top: 10px;
 }
 
 nav .title {
@@ -392,6 +393,7 @@ nav > ul > li:first-of-type {
 .art_museum h3 {
     line-height: calc(var(--row) * 4);
 }
+
 .museum > div {
     width: calc(var(--unit) * 3 - var(--gu));
     height: calc(var(--row) * 18);
@@ -432,7 +434,7 @@ nav > ul > li:first-of-type {
 
 .museum .btn {
     background-color: var(--secondary1);
-    padding: 3px 2rem;
+    padding: 1% 4%;
     margin-top: var(--row);
     margin-right: 1rem;
     border-radius: 2rem;

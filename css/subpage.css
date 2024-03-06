@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+header .header_top {
+    width: 100%;
+    height: calc(28px * 6);
+}
+header .header_bottom {
+    width: 100%;
+    /* height: calc(28px * 3); */
+    position: relative;
+}
+
+footer .footer_top {
+    width: 100%;
+    height: calc(28px * 10);
+}
+footer .footer_bottom {
+    width: 100%;
+    height: calc(28px * 5);
+}
+
+/* title 공통*/
+    /* .inner .title { margin-top: 50px;}  */
+
+/* 링크 호버 */
+a:hover {
+    text-decoration: underline;
+}
+
+/* ====================================
+    ======= 스킵메뉴 ======    
+==================================== */
+.skip_menu {
+    left: 0;
+    top: 0;
+    padding: 10px 15px;
+    width: 150px;
+}
+.skip_menu a {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    background-color: #000;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: translateY(-200%);
+    transition: all 0.3s;
+    text-align: center;
+    padding: 1rem;
+}
+.skip_menu a:focus {
+    transform: translateY(0);
+}
+
+
+/* ====================================
+    ======= header ======
+==================================== */
+.header_top .inner {
+    height: 100%;
+    position: relative;
+}
+.header_top img {
+    margin-top: calc(var(--row) * 2);
+    height: calc(var(--row) * 2.5);
+}
+
+.header_top div.text {
+    width: var(--unit1);
+    margin-top: calc(var(--row) * 2);
+    position: absolute;
+    right: 10px;
+    line-height: calc(var(--row) * 3);
+    justify-content: space-around;
+}
+.header_top .signIn {
+    position: absolute;
+    right: calc(var(--unit1) + 2rem);
+    background-color: var(--secondary1);
+    width: calc(var(--row) * 3);
+    height: calc(var(--row) * 3);
+    border-radius: 50%;
+    line-height: calc(var(--row) * 3);
+    text-align: center;
+    color: white
+}
+
+.header_top .depth2 {
+    line-height: var(--row);
+    display: none;
+    position: absolute;
+    top: 40px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.text ul > li:hover .depth2 {display: block;}
+
+
+/* ====================================
+    ======= .header_bottom = nav ======
+==================================== */
+
+nav {display: block;}
+nav > ul {
+    width: 1560px;
+    display: block;
+    line-height: calc(28px * 3);
+}
+nav .sch img {
+    transform: scale(0.8);
+    margin-top: 10px;
+}
+
+nav .title {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+nav .title.r {
+    text-align: left;
+}
+
+nav > ul > li:not(:last-of-type) {
+    flex-grow: 1;
+}
+nav > ul > li:first-of-type {
+    flex-grow: 0.5;
+}
+
+/* -- depth2 -- */
+
+.header_bottom .title > li {
+    position: relative;
+}
+.w100 {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: white;
+    position: absolute;
+    left: 0;
+	transition: height 0.5s;
+    z-index: 2;
+    margin-top: -1rem;
+}
+.header_bottom li .w100::before {
+    content: '';
+    width: 100%;
+    max-width: 1560px;
+    height: 1px;
+    background-color: black;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header_bottom .depth2 {
+    line-height: var(--row);
+    z-index: 2;
+    max-width: 1560px;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.header_bottom .depth2 a {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-right: 50px;
+}
+.header_bottom li:hover .w100 {
+	height: 70px;
+}
+
+.depth2 > li > a {
+    font-weight: 700;
+    font-size: 20px;
+}
+.depth2 > li > a.sub {
+    font-weight: 500;
+}
+
+/* ====================================
+    ======= 사이드바 ======
+==================================== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#sidebar {
+    position: absolute;
+    bottom: calc(var(--row) * 5);
+    right: 0;
+    left: 100%;
+    transform: translateX(-15%);
+    pointer-events: auto;
+}
+
+#sidebar div {
+    background-color: var(--secondary1);
+    width: calc(var(--row) * 2);
+    height: calc(var(--row) * 2);
+    margin-bottom: 1rem;
+    line-height: calc(var(--row) * 2);
+    text-align: center;
+    border-radius: 5rem;
+    color: white;
+}
+
+#sidebar > a {
+    display: block;
+    position: absolute;
+    transform: scale(1.5);
+    margin-top: 1rem;
+    padding: 0.85rem 0.95rem;
+    left: 1.05rem;
+    background-color: var(--primary1);
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+/* ====================================
+    ======= main 로그인 영역 ======    
+==================================== */
+
+
+
+/* ====================================
+    ======= footer_top ======    
+==================================== */
+
+.footer_top .inner > div {
+    margin-top: calc(var(--row) * 2);
+}
+.footer_top .inner .df {
+    flex: 1;
+}
+
+.footer_top .join {
+    width: 100%;
+    max-width: var(--unit4);
+    flex: 1;
+}
+.footer_top .join div:nth-of-type(2) {
+    margin-top: var(--row);
+}
+.footer_top .join .btn {
+    padding: 0.2rem 2rem;
+    line-height: var(--row);
+    position: absolute;
+    left: calc(var(--unit1) + 10rem);
+    background-color: var(--secondary1);
+    border-radius: 2rem;
+    text-align: center;
+    color: white;
+    margin-top: -0.6rem;
+}
+
+.footer_top .call {
+    line-height: var(--row);
+    width: 100%;
+    max-width: var(--unit4);
+    flex: 1;
+}
+
+.footer_top .wrap {flex: 1;}
+.footer_top .media:not(:last-of-type) {
+    width: var(--unit1);
+}
+.footer_top .media a {
+    display: block;
+    margin-bottom: 1.2rem;
+}
+.footer_top .media .str {
+    font-weight: bold;
+}
+
+/* footer_bottom */
+.footer_bottom .inner {
+    justify-content: space-between;
+}
+
+.footer_bottom a img.html {
+    transform: scale(0.35);
+    margin-top: -2.8rem;
+}
+.footer_bottom a img.css {
+    margin-top: 1rem;
+}
