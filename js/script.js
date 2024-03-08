@@ -1,6 +1,6 @@
 /* vanilla js */
 const pop = $('.popup');
-const btn = $('.popup > .close');
+const btn = $('.popup > span');
 const visual = $('.mainBanner_wrap > img')
 let current = 0;
 let setIntervalID;
@@ -14,7 +14,7 @@ const prev2 = $('.exhibit .title img:first-of-type')
 const next2 = $('.exhibit .title img:last-of-type')
 
 
-$(btn).on('click', function(){
+$('.popup .close').on('click', function(){
     $(pop).hide(500);
 });
 
@@ -199,4 +199,3 @@ prev2.on('click', function(){
     let next = exhibit.eq(current2); //1 
     move2(next, '-100%', '0%')
 })
-
