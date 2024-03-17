@@ -151,10 +151,19 @@ a:hover {
     display: none;
     position: absolute;
     top: 40px;
-    padding: 20px 0;
+    /* padding: 5px; */
     cursor: pointer;
+    z-index: 999;
+    background-color: white;
 }
-.text ul > li:hover .depth2 {display: block;}
+.text ul > li:hover .depth2 {
+    display: block;
+    margin-top: 2rem;
+}
+.text ul > li .depth2 a {
+    font-size: 1.6rem;
+}
+
 
 
 /* ====================================
